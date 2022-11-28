@@ -217,7 +217,7 @@ async function run() {
 run().catch(console.log);
 
 app.get("/", async (req, res) => {
-  res.send("laptop shop server is running");
+  res.send("laptop shop server running");
 });
 
 app.listen(port, () => console.log(`laptop shop running on ${port}`));
