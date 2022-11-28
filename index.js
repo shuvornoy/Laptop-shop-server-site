@@ -22,7 +22,7 @@ const client = new MongoClient(uri, {useNewUrlParser: true,useUnifiedTopology: t
 function verifyJWT(req, res, next) {
   const authHeader = req.headers.authorization;
   if (!authHeader) {
-    return res.status(401).send("unauthorized acces");
+    return res.status(401).send("unauthorized access");
   }
 
   const token = authHeader.split(" ")[1];
@@ -180,7 +180,7 @@ async function run() {
     });
     
 
-    //temporary to update price field on appointment options
+   
     app.get('/addPrice', async (req, res) => {
         const filter = {}
         const options = { upsert: true }
@@ -220,4 +220,4 @@ app.get("/", async (req, res) => {
   res.send("laptop shop server is running");
 });
 
-app.listen(port, () => console.log(`laptop shop running on ${port}`));
+app.listen(port, () => console.log(`laptop shop the running on ${port}`));
