@@ -22,7 +22,7 @@ const client = new MongoClient(uri, {useNewUrlParser: true,useUnifiedTopology: t
 function verifyJWT(req, res, next) {
   const authHeader = req.headers.authorization;
   if (!authHeader) {
-    return res.status(401).send("unauthorized access");
+    return res.status(401).send("unauthorized acces");
   }
 
   const token = authHeader.split(" ")[1];
