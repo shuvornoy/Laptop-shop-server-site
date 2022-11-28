@@ -220,4 +220,4 @@ app.get("/", async (req, res) => {
   res.send("laptop shop server is running");
 });
 
-app.listen(port, () => console.log(`laptop shop the running on ${port}`));
+app.listen(port, () => console.log(`laptop shop running on ${port}`));
